@@ -13,7 +13,7 @@ Dieses Repository enthält jetzt ein minimales SAP-Fiori-Webapp-Grundgerüst unt
 Zum lokalen Starten kann z. B. ein statischer Webserver genutzt werden:
 
 ```bash
-cd /home/runner/work/Auftragsauswertung/Auftragsauswertung
+cd <repository-root>
 python3 -m http.server 8080
 ```
 

@@ -28,6 +28,14 @@
         "sap.m": {}
       }
     },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "auftragsauswertung.i18n.i18n"
+        }
+      }
+    },
     "contentDensities": {
       "compact": true,
       "cozy": true

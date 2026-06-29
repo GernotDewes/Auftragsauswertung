@@ -3,9 +3,9 @@
     xmlns="sap.m">
     <App id="app">
         <pages>
-            <Page id="mainPage" title="Auftragsauswertung">
+            <Page id="mainPage" title="{i18n>appTitle}">
                 <content>
-                    <Text text="Willkommen zur SAP-Fiori-Webapp Auftragsauswertung." />
+                    <Text text="{i18n>welcomeText}" />
                 </content>
             </Page>
         </pages>
