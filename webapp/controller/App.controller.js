@@ -56,8 +56,13 @@ sap.ui.define([
             }
 
             if (sFehlerMaterial) {
-                aFilters.push(new Filter("fehlerMaterial", FilterOperator.Contains, sFehlerMaterial));
-                aFilters.push(new Filter("meldung", FilterOperator.NE, ""));
+                aFilters.push(new Filter({
+                    filters: [
+                        new Filter("fehlerMaterial", FilterOperator.Contains, sFehlerMaterial),
+                        new Filter("meldung", FilterOperator.NE, "")
+                    ],
+                    and: true
+                }));
             }
 
             var oTable = this.byId("ordersTable");
