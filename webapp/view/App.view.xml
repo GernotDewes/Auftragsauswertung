@@ -1,11 +1,45 @@
 <mvc:View
+    controllerName="auftragsauswertung.controller.App"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <App id="app">
         <pages>
             <Page id="mainPage" title="{i18n>appTitle}">
                 <content>
-                    <Text text="{i18n>welcomeText}" />
+                    <VBox class="sapUiSmallMargin">
+                        <Title text="{i18n>selectionTitle}" level="H4" />
+                        <Label text="{i18n>kopfMaterialLabel}" labelFor="kopfMaterialInput" />
+                        <Input id="kopfMaterialInput" value="{view>/kopfMaterial}" placeholder="{i18n>kopfMaterialPlaceholder}" />
+                        <Label text="{i18n>fehlerMaterialLabel}" labelFor="fehlerMaterialInput" />
+                        <Input id="fehlerMaterialInput" value="{view>/fehlerMaterial}" placeholder="{i18n>fehlerMaterialPlaceholder}" />
+                        <Button text="{i18n>searchButton}" press=".onSearch" class="sapUiSmallMarginTop sapUiTinyMarginBottom" />
+                        <Table id="ordersTable" items="{orders>/items}">
+                            <columns>
+                                <Column>
+                                    <Text text="{i18n>orderColumn}" />
+                                </Column>
+                                <Column>
+                                    <Text text="{i18n>kopfMaterialColumn}" />
+                                </Column>
+                                <Column>
+                                    <Text text="{i18n>fehlerMaterialColumn}" />
+                                </Column>
+                                <Column>
+                                    <Text text="{i18n>messageColumn}" />
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <Text text="{orders>auftrag}" />
+                                        <Text text="{orders>kopfMaterial}" />
+                                        <Text text="{orders>fehlerMaterial}" />
+                                        <Text text="{orders>meldung}" />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </VBox>
                 </content>
             </Page>
         </pages>
