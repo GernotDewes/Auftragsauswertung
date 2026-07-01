@@ -34,7 +34,7 @@
                                         <Text text="{orders>auftrag}" />
                                         <Text text="{orders>kopfMaterial}" />
                                         <Text text="{orders>fehlerMaterial}" />
-                                        <Text text="{orders>meldung}" />
+                                        <Text text="{orders>fehlerMeldung}" />
                                     </cells>
                                 </ColumnListItem>
                             </items>

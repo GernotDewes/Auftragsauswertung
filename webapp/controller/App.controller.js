@@ -14,25 +14,25 @@ sap.ui.define([
                         auftrag: "1000001",
                         kopfMaterial: "MAT-1000",
                         fehlerMaterial: "",
-                        meldung: ""
+                        fehlerMeldung: ""
                     },
                     {
                         auftrag: "1000002",
                         kopfMaterial: "MAT-1000",
                         fehlerMaterial: "MAT-4711",
-                        meldung: "Fehlermeldung für Material MAT-4711"
+                        fehlerMeldung: "Fehlermeldung für Material MAT-4711"
                     },
                     {
                         auftrag: "1000003",
                         kopfMaterial: "MAT-2000",
                         fehlerMaterial: "MAT-7777",
-                        meldung: "Fehlermeldung für Material MAT-7777"
+                        fehlerMeldung: "Fehlermeldung für Material MAT-7777"
                     },
                     {
                         auftrag: "1000004",
                         kopfMaterial: "MAT-3000",
                         fehlerMaterial: "",
-                        meldung: ""
+                        fehlerMeldung: ""
                     }
                 ]
             });
@@ -56,13 +56,7 @@ sap.ui.define([
             }
 
             if (sFehlerMaterial) {
-                aFilters.push(new Filter({
-                    filters: [
-                        new Filter("fehlerMaterial", FilterOperator.Contains, sFehlerMaterial),
-                        new Filter("meldung", FilterOperator.NE, "")
-                    ],
-                    and: true
-                }));
+                aFilters.push(new Filter("fehlerMaterial", FilterOperator.Contains, sFehlerMaterial));
             }
 
             var oTable = this.byId("ordersTable");
