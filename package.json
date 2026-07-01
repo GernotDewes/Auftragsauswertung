@@ -1,0 +1,20 @@
+{
+  "name": "auftragsauswertung",
+  "version": "1.0.0",
+  "description": "Auftragsauswertung COOIS vs. COGI",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "echo \"No automated tests configured\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GernotDewes/Auftragsauswertung.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GernotDewes/Auftragsauswertung/issues"
+  },
+  "homepage": "https://github.com/GernotDewes/Auftragsauswertung#readme"
+}
